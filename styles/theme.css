@@ -1,0 +1,88 @@
+:root {
+  --background: #fbfaf4;
+  --foreground: #14352a;
+  --card: #ffffff;
+  --card-foreground: #14352a;
+  --primary: #1c4232;
+  --primary-foreground: #f8fbf2;
+  --secondary: #eef0e4;
+  --secondary-foreground: #1c4232;
+  --muted: #f1f1e7;
+  --muted-foreground: #58685e;
+  --border: #e1e2d4;
+  --ring: #4c7a5c;
+  --destructive: #b42318;
+  --forest: #123024;
+  --forest-foreground: #f4f7ec;
+  --lime: #c8f14b;
+  --lime-foreground: #17321f;
+  --lavender: #e6e2fb;
+  --lavender-foreground: #2c2a50;
+  --peach: #fbe7d6;
+  --peach-foreground: #633619;
+  --sky: #dfecf8;
+  --sky-foreground: #1d3c56;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #0e1a14;
+  --foreground: #eef4e9;
+  --card: #14241b;
+  --card-foreground: #eef4e9;
+  --primary: #c8f14b;
+  --primary-foreground: #12241a;
+  --secondary: #1c3025;
+  --secondary-foreground: #eef4e9;
+  --muted: #1a2b21;
+  --muted-foreground: #a9b9ad;
+  --border: #2a3f31;
+  --ring: #c8f14b;
+  --destructive: #f97066;
+  --forest: #0a1510;
+  --forest-foreground: #eef4e9;
+  --lime: #c8f14b;
+  --lime-foreground: #12241a;
+  --lavender: #262340;
+  --lavender-foreground: #dedaff;
+  --peach: #38281c;
+  --peach-foreground: #f7d9c2;
+  --sky: #1a2f40;
+  --sky-foreground: #d7e9f8;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-forest: var(--forest);
+  --color-forest-foreground: var(--forest-foreground);
+  --color-lime: var(--lime);
+  --color-lime-foreground: var(--lime-foreground);
+  --color-lavender: var(--lavender);
+  --color-lavender-foreground: var(--lavender-foreground);
+  --color-peach: var(--peach);
+  --color-peach-foreground: var(--peach-foreground);
+  --color-sky: var(--sky);
+  --color-sky-foreground: var(--sky-foreground);
+  --font-sans:
+    var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 16px);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}

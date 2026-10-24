@@ -9,6 +9,7 @@ import { ServiceIcon, toneStyles } from "@/components/ui/service-icon";
 import { home } from "@/content/home";
 import { featuredServices } from "@/content/services";
 import { siteConfig } from "@/content/site";
+import { imagePosition } from "@/lib/image-position";
 import { cn } from "@/lib/utils";
 
 export function HomeServices() {
@@ -44,6 +45,7 @@ export function HomeServices() {
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, 90vw"
                     className="object-cover transition-transform duration-400 ease-smooth group-hover:scale-[1.03]"
+                    style={{ objectPosition: imagePosition(service.image) }}
                   />
                   <Badge
                     variant="accent"

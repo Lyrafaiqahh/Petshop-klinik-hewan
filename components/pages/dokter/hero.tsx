@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/layouts/section";
 import { buttonStyles } from "@/components/ui/button";
 import { dokterPage } from "@/content/dokter";
+import { imagePosition } from "@/lib/image-position";
 
 export function DokterHero() {
   return (
@@ -56,6 +57,7 @@ export function DokterHero() {
                 priority
                 sizes="(min-width: 1024px) 42vw, 90vw"
                 className="object-cover"
+                style={{ objectPosition: imagePosition("/images/about.jpg") }}
               />
             </div>
             <p className="absolute bottom-4 left-4 max-w-[14rem] rounded-xl bg-background/95 p-3 text-[11px] leading-4 text-muted-foreground">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { LuArrowUpRight, LuBadgeCheck, LuCheck } from "react-icons/lu";
 import { Container } from "@/components/ui/container";
@@ -9,6 +10,7 @@ import { toneStyles } from "@/components/ui/service-icon";
 import { dokterPage } from "@/content/dokter";
 import { doctors } from "@/content/doctors";
 import { bookingDoctorHref } from "@/lib/links";
+import { imagePosition } from "@/lib/image-position";
 import { cn } from "@/lib/utils";
 
 export function DoctorProfiles() {
@@ -28,15 +30,23 @@ export function DoctorProfiles() {
           {doctors.map((doctor) => (
             <li key={doctor.slug}>
               <article className="grid gap-6 rounded-3xl border border-border bg-background p-5 sm:p-6 md:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_18rem] lg:items-start lg:gap-8">
-                <span
+                <div
                   className={cn(
-                    "grid size-20 place-items-center rounded-2xl text-2xl font-bold sm:size-24",
+                    "relative aspect-[4/5] w-40 shrink-0 overflow-hidden rounded-2xl border-2 border-card p-1 sm:w-44 lg:w-52",
                     toneStyles[doctor.tone],
                   )}
-                  aria-hidden
                 >
-                  {doctor.initials}
-                </span>
+                  <div className="relative h-full w-full overflow-hidden rounded-xl">
+                    <Image
+                      src={doctor.image}
+                      alt={doctor.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 208px, (min-width: 640px) 176px, 160px"
+                      className="object-cover"
+                      style={{ objectPosition: imagePosition(doctor.image) }}
+                    />
+                  </div>
+                </div>
 
                 <div>
                   <div className="flex flex-wrap items-center gap-2">
@@ -93,7 +103,6 @@ export function DoctorProfiles() {
                   <Link
                     href={bookingDoctorHref(doctor.slug)}
                     className={buttonStyles({
-                      variant: "outline",
                       size: "sm",
                       className: "mt-4 w-full",
                     })}

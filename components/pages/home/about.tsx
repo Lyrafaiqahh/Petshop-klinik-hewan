@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { buttonStyles } from "@/components/ui/button";
 import { BenefitIcon } from "@/components/ui/service-icon";
 import { home } from "@/content/home";
+import { imagePosition } from "@/lib/image-position";
 
 export function HomeAbout() {
   return (
@@ -28,6 +29,7 @@ export function HomeAbout() {
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="object-cover"
+                style={{ objectPosition: imagePosition(home.about.image) }}
               />
             </div>
             <figure className="relative z-10 mx-4 -mt-14 rounded-2xl border border-border bg-background p-5 shadow-lg sm:mx-8 lg:absolute lg:right-0 lg:-bottom-6 lg:mx-0 lg:max-w-[17rem]">

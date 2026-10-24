@@ -23,7 +23,7 @@ export const layananPage = {
       },
       {
         src: "/images/grooming.jpg",
-        alt: "Ilustrasi anjing setelah grooming (foto stok)",
+        alt: "Ilustrasi anjing sedang disisir (foto stok)",
       },
       {
         src: "/images/hotel.jpg",
@@ -83,7 +83,7 @@ export const layananPage = {
     title: "Kebutuhan harian anabul.",
     description:
       "Katalog contoh untuk makanan, camilan, mainan, perlengkapan grooming, dan aksesori. Tidak ada cart atau checkout; pembelian diarahkan ke WhatsApp atau kunjungan toko.",
-    askLabel: "Tanya stok via WhatsApp",
+    askLabel: "Tanya stok",
     availabilityLabel: "Ketersediaan",
     note: "Tidak ada transaksi online di website ini. Harga dan stok adalah data simulasi.",
   },

@@ -146,8 +146,8 @@ export const nonMedicalServices: Service[] = [
     icon: "scissors",
     tone: "lavender",
     duration: "± 45–90 menit",
-    image: "/images/hero-cat.jpg",
-    imageAlt: "Ilustrasi kucing berbulu pendek (foto stok)",
+    image: "/images/grooming-cat.jpg",
+    imageAlt: "Ilustrasi kucing sedang disisir (foto stok)",
   },
   {
     slug: "grooming-anjing",
@@ -160,7 +160,7 @@ export const nonMedicalServices: Service[] = [
     tone: "lime",
     duration: "± 60–120 menit",
     image: "/images/grooming.jpg",
-    imageAlt: "Ilustrasi anjing berbulu putih setelah perawatan (foto stok)",
+    imageAlt: "Ilustrasi anjing sedang disisir (foto stok)",
   },
   {
     slug: "pet-hotel",
@@ -211,7 +211,7 @@ export const featuredServices: FeaturedService[] = [
       "Mandi, potong bulu, dan perawatan kuku untuk kucing dan anjing dengan penanganan yang sabar.",
     href: "/layanan?kategori=nonmedis#layanan",
     image: "/images/grooming.jpg",
-    imageAlt: "Ilustrasi anjing berbulu putih (foto stok)",
+    imageAlt: "Ilustrasi penyisiran bulu anjing (foto stok)",
     tone: "lavender",
     icon: "scissors",
     meta: "Mulai Rp 85.000",

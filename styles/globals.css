@@ -12,6 +12,13 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary,
+  select {
+    cursor: pointer;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

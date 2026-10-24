@@ -26,7 +26,7 @@ export const products: Product[] = [
     category: "Makanan",
     description:
       "Pilihan makanan kering harian untuk kucing dan anjing dewasa. Stok rasa dan ukuran kemasan dapat ditanyakan ke admin.",
-    image: "/images/petshop.jpg",
+    image: "/images/petshop-square.jpg",
     imageAlt: "Ilustrasi mangkuk berisi kibble hewan (foto stok)",
     availability: "Tersedia beberapa ukuran kemasan",
   },
@@ -36,8 +36,9 @@ export const products: Product[] = [
     category: "Camilan",
     description:
       "Camilan kunyah untuk membantu aktivitas mengunyah anabul. Pilih ukuran sesuai berat dan jenis hewan.",
-    image: "/images/beagle.jpg",
-    imageAlt: "Ilustrasi anjing beagle yang ceria (foto stok)",
+    image: "/images/product-treats-square.jpg",
+    imageAlt:
+      "Ilustrasi mangkuk berisi camilan gigi berbentuk tulang (foto stok)",
     availability: "Stok terbatas, cek ke admin",
   },
   {
@@ -46,7 +47,7 @@ export const products: Product[] = [
     category: "Mainan",
     description:
       "Mainan kunyah dan permainan interaktif untuk menjaga anabul tetap aktif di rumah.",
-    image: "/images/product-toys.jpg",
+    image: "/images/product-toys-square.jpg",
     imageAlt: "Ilustrasi anjing membawa mainan (foto stok)",
     availability: "Tersedia beberapa pilihan",
   },
@@ -56,8 +57,9 @@ export const products: Product[] = [
     category: "Grooming",
     description:
       "Perlengkapan mandi dan penyisiran untuk perawatan bulu di rumah. Tanyakan kecocokan produk untuk jenis bulu anabul.",
-    image: "/images/grooming.jpg",
-    imageAlt: "Ilustrasi anjing berbulu putih (foto stok)",
+    image: "/images/product-shampoo-square.jpg",
+    imageAlt:
+      "Ilustrasi botol sampo hewan di samping seekor anjing (foto stok)",
     availability: "Tersedia di toko",
   },
   {
@@ -66,8 +68,8 @@ export const products: Product[] = [
     category: "Aksesori",
     description:
       "Harness, kalung, dan aksesori jalan-jalan dengan ukuran yang bisa disesuaikan. Cek ukuran sebelum membeli.",
-    image: "/images/product-accessory.jpg",
-    imageAlt: "Ilustrasi kucing memakai kacamata aksesori (foto stok)",
+    image: "/images/product-harness-square.jpg",
+    imageAlt: "Ilustrasi anjing memakai harness merah (foto stok)",
     availability: "Cek warna dan ukuran via WhatsApp",
   },
 ];

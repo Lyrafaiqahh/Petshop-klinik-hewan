@@ -19,6 +19,7 @@ import {
 } from "@/content/services";
 import { bookingServiceHref, serviceWhatsappLink } from "@/lib/links";
 import { formatPriceWithUnit } from "@/lib/pricing";
+import { imagePosition } from "@/lib/image-position";
 import { cn } from "@/lib/utils";
 
 export type ServiceCatalogProps = {
@@ -48,49 +49,54 @@ export function ServiceCatalog({ initialCategory }: ServiceCatalogProps) {
         />
 
         <div className="mt-8">
-          <div
-            role="group"
-            aria-label={layananPage.catalog.filterLabel}
-            className="inline-flex flex-wrap gap-1 rounded-full border border-border bg-card p-1.5"
-          >
-            {serviceCategories.map((item) => {
-              const isActive = item.value === category;
-              const count =
-                item.value === "semua"
-                  ? services.length
-                  : services.filter(
-                      (service) => service.category === item.value,
-                    ).length;
+          <div className="flex justify-center">
+            <div
+              role="group"
+              aria-label={layananPage.catalog.filterLabel}
+              className="flex w-full max-w-2xl flex-wrap justify-center gap-1.5 rounded-2xl border border-border bg-card p-1.5 sm:rounded-full"
+            >
+              {serviceCategories.map((item) => {
+                const isActive = item.value === category;
+                const count =
+                  item.value === "semua"
+                    ? services.length
+                    : services.filter(
+                        (service) => service.category === item.value,
+                      ).length;
 
-              return (
-                <button
-                  key={item.value}
-                  type="button"
-                  aria-pressed={isActive}
-                  onClick={() => setCategory(item.value)}
-                  className={cn(
-                    "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150 ease-smooth focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none",
-                    isActive
-                      ? "bg-forest text-forest-foreground"
-                      : "text-muted-foreground hover:bg-muted hover:text-foreground",
-                  )}
-                >
-                  {item.label}
-                  <span
+                return (
+                  <button
+                    key={item.value}
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => setCategory(item.value)}
                     className={cn(
-                      "rounded-full px-1.5 py-0.5 text-[11px] font-semibold",
+                      "inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors duration-150 ease-smooth focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:px-6",
                       isActive
-                        ? "bg-forest-foreground/15 text-forest-foreground"
-                        : "bg-muted text-muted-foreground",
+                        ? "bg-forest text-forest-foreground"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground",
                     )}
                   >
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
+                    {item.label}
+                    <span
+                      className={cn(
+                        "rounded-full px-1.5 py-0.5 text-[11px] font-semibold",
+                        isActive
+                          ? "bg-forest-foreground/15 text-forest-foreground"
+                          : "bg-muted text-muted-foreground",
+                      )}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-          <p className="mt-3 text-sm text-muted-foreground" aria-live="polite">
+          <p
+            className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground"
+            aria-live="polite"
+          >
             {activeCategory.description} · {visibleServices.length}{" "}
             {layananPage.catalog.countLabel}
           </p>
@@ -113,6 +119,7 @@ export function ServiceCatalog({ initialCategory }: ServiceCatalogProps) {
                         fill
                         sizes="(min-width: 768px) 48vw, 90vw"
                         className="object-cover"
+                        style={{ objectPosition: imagePosition(service.image) }}
                       />
                     </div>
                   ) : null}

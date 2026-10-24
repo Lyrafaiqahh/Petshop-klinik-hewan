@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa6";
 import { LuPhone } from "react-icons/lu";
 import { Container } from "@/components/ui/container";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
@@ -8,7 +7,7 @@ import { Logo } from "@/components/layouts/logo";
 import { MobileNav } from "@/components/layouts/mobile-nav";
 import { NavLink } from "@/components/layouts/nav-link";
 import { siteConfig } from "@/content/site";
-import { generalWhatsappLink, telLink } from "@/lib/links";
+import { telLink } from "@/lib/links";
 
 export function SiteHeader() {
   return (
@@ -40,20 +39,6 @@ export function SiteHeader() {
             <span className="hidden xl:inline">
               {siteConfig.ctas.callEmergency}
             </span>
-          </a>
-          <a
-            href={generalWhatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={siteConfig.a11y.whatsappFloat}
-            className={buttonStyles({
-              variant: "ghost",
-              size: "sm",
-              className: "hidden lg:inline-flex",
-            })}
-          >
-            <FaWhatsapp className="size-4" aria-hidden />
-            <span className="hidden xl:inline">{siteConfig.ctas.whatsapp}</span>
           </a>
           <Link
             href="/booking"

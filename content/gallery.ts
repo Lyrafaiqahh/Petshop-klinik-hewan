@@ -24,7 +24,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: "/images/grooming.jpg",
-    alt: "Ilustrasi anjing berbulu putih setelah grooming (foto stok)",
+    alt: "Ilustrasi penyisiran bulu anjing (foto stok)",
     caption: "Hasil grooming",
   },
   {
@@ -51,4 +51,4 @@ export const gallery: GalleryItem[] = [
 ];
 
 export const galleryNote =
-  "Semua foto adalah stok dari Unsplash dan hanya berfungsi sebagai ilustrasi. Foto bukan pasien, dokter, atau fasilitas Ruang Anabul yang sebenarnya.";
+  "Semua foto adalah stok dari penyedia foto gratis dan hanya berfungsi sebagai ilustrasi. Foto bukan pasien, dokter, atau fasilitas Ruang Anabul yang sebenarnya.";

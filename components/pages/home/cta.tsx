@@ -8,6 +8,7 @@ import { buttonStyles } from "@/components/ui/button";
 import { home } from "@/content/home";
 import { siteConfig } from "@/content/site";
 import { generalWhatsappLink } from "@/lib/links";
+import { imagePosition } from "@/lib/image-position";
 
 export function HomeCta() {
   return (
@@ -70,6 +71,7 @@ export function HomeCta() {
                 fill
                 sizes="(min-width: 1024px) 38vw, 90vw"
                 className="object-cover"
+                style={{ objectPosition: imagePosition(home.cta.image) }}
               />
             </div>
           </div>

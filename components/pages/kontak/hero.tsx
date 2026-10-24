@@ -7,6 +7,7 @@ import { buttonStyles } from "@/components/ui/button";
 import { kontakPage } from "@/content/kontak";
 import { siteConfig } from "@/content/site";
 import { mapsDirectionsUrl } from "@/lib/links";
+import { imagePosition } from "@/lib/image-position";
 
 export function KontakHero() {
   return (
@@ -57,6 +58,7 @@ export function KontakHero() {
                 priority
                 sizes="(min-width: 1024px) 42vw, 90vw"
                 className="object-cover"
+                style={{ objectPosition: imagePosition("/images/clinic.jpg") }}
               />
             </div>
             <div className="absolute right-4 bottom-4 left-4 rounded-2xl bg-background/95 p-4">

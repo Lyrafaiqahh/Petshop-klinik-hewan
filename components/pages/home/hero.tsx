@@ -8,6 +8,7 @@ import { HeroHours } from "@/components/pages/home/hero-hours";
 import { home } from "@/content/home";
 import { siteConfig } from "@/content/site";
 import { telLink } from "@/lib/links";
+import { imagePosition } from "@/lib/image-position";
 
 export function HomeHero() {
   return (
@@ -89,6 +90,9 @@ export function HomeHero() {
                 fill
                 sizes="(min-width: 640px) 144px, 96px"
                 className="object-cover"
+                style={{
+                  objectPosition: imagePosition(home.hero.imageSecondary),
+                }}
               />
             </div>
 

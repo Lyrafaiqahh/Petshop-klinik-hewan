@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { home } from "@/content/home";
 import { gallery, galleryNote } from "@/content/gallery";
 import { cn } from "@/lib/utils";
+import { imagePosition } from "@/lib/image-position";
 
 export function HomeGallery() {
   return (
@@ -32,6 +33,7 @@ export function HomeGallery() {
                 fill
                 sizes="(min-width: 768px) 25vw, 50vw"
                 className="object-cover transition-transform duration-400 ease-smooth group-hover:scale-[1.03]"
+                style={{ objectPosition: imagePosition(item.src) }}
               />
               <div
                 className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest/85 via-forest/25 to-transparent p-3 pt-10 md:p-4"

@@ -14,6 +14,8 @@ export type Doctor = {
   focus: string;
   bio: string;
   initials: string;
+  image: string;
+  imageAlt: string;
   focusAreas: string[];
   credentials: string[];
   summary: string[];
@@ -39,6 +41,9 @@ export const doctors: Doctor[] = [
     focus: "Perawatan umum dan penyakit dalam",
     bio: "Menangani pemeriksaan rutin, keluhan pencernaan, dan penyakit dalam pada kucing dan anjing. Fokus pada penjelasan diagnosis yang mudah dipahami pemilik.",
     initials: "AP",
+    image: "/images/doctor-aditya-portrait.jpg",
+    imageAlt:
+      "Ilustrasi dokter hewan pria memeriksa anjing di klinik (foto stok)",
     focusAreas: ["Pemeriksaan umum", "Penyakit dalam", "Konsultasi perawatan"],
     credentials: [
       "Dokter hewan umum (profil simulasi)",
@@ -68,6 +73,8 @@ export const doctors: Doctor[] = [
     focus: "Kedokteran preventif dan vaksinasi",
     bio: "Membantu pemilik menyusun jadwal vaksinasi, pemeriksaan berkala, dan pencegahan penyakit menular sesuai usia serta gaya hidup anabul.",
     initials: "NP",
+    image: "/images/doctor-nadia-portrait.jpg",
+    imageAlt: "Ilustrasi dokter hewan wanita mengenakan jas putih (foto stok)",
     focusAreas: ["Vaksinasi", "Kedokteran preventif", "Edukasi pemilik"],
     credentials: [
       "Dokter hewan umum (profil simulasi)",
@@ -97,6 +104,9 @@ export const doctors: Doctor[] = [
     focus: "Bedah dan rehabilitasi hewan",
     bio: "Menangani tindakan bedah umum, perawatan pascaoperasi, dan program pemulihan bertahap untuk anabul yang membutuhkan rehabilitasi.",
     initials: "RM",
+    image: "/images/doctor-rizky-portrait.jpg",
+    imageAlt:
+      "Ilustrasi dokter hewan pria memegang anjing pomeranian (foto stok)",
     focusAreas: ["Tindakan bedah", "Perawatan pascaoperasi", "Rehabilitasi"],
     credentials: [
       "Dokter hewan umum (profil simulasi)",

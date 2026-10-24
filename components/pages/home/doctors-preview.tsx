@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { LuArrowRight } from "react-icons/lu";
 import { Container } from "@/components/ui/container";
@@ -10,6 +11,7 @@ import { home } from "@/content/home";
 import { doctors } from "@/content/doctors";
 import { siteConfig } from "@/content/site";
 import { bookingDoctorHref } from "@/lib/links";
+import { imagePosition } from "@/lib/image-position";
 import { cn } from "@/lib/utils";
 
 export function HomeDoctors() {
@@ -37,15 +39,25 @@ export function HomeDoctors() {
               <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <span
+                    <div
                       className={cn(
-                        "grid size-14 place-items-center rounded-2xl text-lg font-bold",
+                        "relative size-14 shrink-0 overflow-hidden rounded-xl border-2 border-card p-0.5",
                         toneStyles[doctor.tone],
                       )}
-                      aria-hidden
                     >
-                      {doctor.initials}
-                    </span>
+                      <div className="relative h-full w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={doctor.image}
+                          alt={doctor.imageAlt}
+                          fill
+                          sizes="56px"
+                          className="object-cover"
+                          style={{
+                            objectPosition: imagePosition(doctor.image),
+                          }}
+                        />
+                      </div>
+                    </div>
                     <div>
                       <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
                         {doctor.role}
@@ -79,7 +91,6 @@ export function HomeDoctors() {
                 <Link
                   href={bookingDoctorHref(doctor.slug)}
                   className={buttonStyles({
-                    variant: "outline",
                     size: "sm",
                     className: "mt-5 w-full",
                   })}

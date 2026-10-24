@@ -26,7 +26,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${item.id}`}
                 onClick={() => setOpenId(isOpen ? null : item.id)}
-                className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left transition-colors hover:bg-muted/60 focus-visible:bg-muted/60 focus-visible:outline-none sm:px-6"
+                className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-5 text-left transition-colors hover:bg-muted/60 focus-visible:bg-muted/60 focus-visible:outline-none sm:px-6"
               >
                 <span className="text-sm font-semibold sm:text-base">
                   {item.question}

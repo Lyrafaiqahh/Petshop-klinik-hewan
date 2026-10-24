@@ -8,6 +8,7 @@ import { buttonStyles } from "@/components/ui/button";
 import { layananPage } from "@/content/layanan";
 import { siteConfig } from "@/content/site";
 import { generalWhatsappLink } from "@/lib/links";
+import { imagePosition } from "@/lib/image-position";
 
 const imageClasses = [
   "row-span-2 h-full min-h-64 rounded-[2rem] lg:min-h-80",
@@ -72,6 +73,7 @@ export function LayananHero() {
                   fill
                   sizes="(min-width: 1024px) 24vw, 45vw"
                   className="object-cover"
+                  style={{ objectPosition: imagePosition(image.src) }}
                 />
               </div>
             ))}

@@ -43,21 +43,28 @@ export function CtaBand({
           className={cn(
             "relative overflow-hidden rounded-3xl px-6 py-10 sm:px-10 lg:py-12",
             isLavender
-              ? "bg-lavender text-lavender-foreground"
+              ? "bg-lavender text-lavender-foreground [.dark_&]:border [.dark_&]:border-lime/25 [.dark_&]:bg-forest [.dark_&]:text-foreground [.dark_&]:shadow-[0_0_60px_-20px] [.dark_&]:shadow-lime/30"
               : "bg-forest text-forest-foreground",
           )}
         >
+          {/* Dark mode: lime glow supaya kartu hidup & senada dengan tema */}
+          {isLavender ? (
+            <div
+              className="pointer-events-none absolute -top-24 -right-16 hidden size-72 rounded-full bg-lime/20 blur-3xl [.dark_&]:block"
+              aria-hidden
+            />
+          ) : null}
           <div
             className={cn(
               "absolute -top-16 -right-10 size-52 rounded-full",
-              isLavender ? "bg-forest/10" : "bg-lime/15",
+              isLavender ? "bg-forest/10 [.dark_&]:bg-lime/10" : "bg-lime/15",
             )}
             aria-hidden
           />
           <div
             className={cn(
               "absolute -bottom-10 left-1/3 size-24 rounded-full border",
-              isLavender ? "border-forest/15" : "border-lime/20",
+              isLavender ? "border-forest/15 [.dark_&]:border-lime/25" : "border-lime/20",
             )}
             aria-hidden
           />
@@ -65,7 +72,7 @@ export function CtaBand({
             <p
               className={cn(
                 "flex items-center gap-2 text-xs font-bold tracking-[0.18em] uppercase",
-                isLavender ? "text-forest" : "text-lime",
+                isLavender ? "text-forest [.dark_&]:text-lime" : "text-lime",
               )}
             >
               <LuPawPrint className="size-4" aria-hidden />
@@ -78,7 +85,7 @@ export function CtaBand({
               className={cn(
                 "mt-3 text-sm leading-6 sm:text-base sm:leading-7",
                 isLavender
-                  ? "text-lavender-foreground/75"
+                  ? "text-lavender-foreground/75 [.dark_&]:text-foreground/75"
                   : "text-forest-foreground/70",
               )}
             >
@@ -99,7 +106,7 @@ export function CtaBand({
                     variant: "outline",
                     size: "lg",
                     className: isLavender
-                      ? "border-forest/25 text-forest hover:bg-forest/10"
+                      ? "border-forest/25 text-forest hover:bg-forest/10 [.dark_&]:border-lime/50 [.dark_&]:text-foreground [.dark_&]:hover:border-lime [.dark_&]:hover:bg-lime/10 [.dark_&]:hover:text-lime"
                       : "border-forest-foreground/25 text-forest-foreground hover:bg-forest-foreground/10",
                   })}
                 >
@@ -115,11 +122,14 @@ export function CtaBand({
                     variant: "outline",
                     size: "lg",
                     className: isLavender
-                      ? "border-forest/25 text-forest hover:bg-forest/10"
+                      ? "border-forest/25 text-forest hover:bg-forest/10 [.dark_&]:border-lime/50 [.dark_&]:text-foreground [.dark_&]:hover:border-lime [.dark_&]:hover:bg-lime/10 [.dark_&]:hover:text-lime"
                       : "border-forest-foreground/25 text-forest-foreground hover:bg-forest-foreground/10",
                   })}
                 >
-                  <FaWhatsapp className="size-4" aria-hidden />
+                  <FaWhatsapp
+                    className="size-4 [.dark_&]:text-lime"
+                    aria-hidden
+                  />
                   {secondaryLabel ?? siteConfig.ctas.whatsapp}
                 </a>
               )}
@@ -129,7 +139,7 @@ export function CtaBand({
                 className={cn(
                   "mt-4 text-xs leading-5",
                   isLavender
-                    ? "text-lavender-foreground/65"
+                    ? "text-lavender-foreground/65 [.dark_&]:text-foreground/60"
                     : "text-forest-foreground/55",
                 )}
               >
